@@ -1,0 +1,350 @@
+<body>
+    <!-- <app-navmenu -->
+  <!-- **********************solo dejar <router-oulet></router-oulet -->
+    <style>
+      /* Ajustes para el menú lateral */
+      #sidebar {
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #34938A;
+        padding-top: 20px;
+        padding-right: 10px;
+        
+      }
+  
+      #sidebar img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        margin-left: 60px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      }
+  
+      #sidebar a {
+        padding: 8px 8px 8px 40px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #235144;
+        display: block;
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+        width: 250px;
+      }
+  
+      #sidebar a:hover {
+        color: #f1f1f1;
+      }
+  
+      #name {
+          padding: 8px 8px 8px 32px;
+          margin-bottom: 20px;
+      }
+      
+      /* Ajustes para el contenido principal */
+      #content {
+        margin-left: 300px;
+        padding: 16px;
+        text-align: center;
+      }
+      #content h2 {
+        padding: 30px;
+        font-size: 100px;
+       
+      }
+  
+      #card {
+        margin-top: 100px;
+      }
+      body {
+        /* background-color: #EAE9E5; */
+        background-color: #FDF7F4;
+      }
+      #name {
+        padding: 8px 8px 8px 32px;
+        margin-bottom: 20px;
+      }
+    </style>
+  
+     <!-- Menú lateral -->
+     <div id="sidebar">
+      <img
+        src="https://media.licdn.com/dms/image/C4D03AQEHRK9vAMg7GQ/profile-displayphoto-shrink_800_800/0/1610456043794?e=2147483647&v=beta&t=5th1EMz43gNYMxgSfhtuawoZpPTlkBJmRvEQuUcbrdo"
+        alt="Imagen de Usuario">
+        <div id="name" class="text-darck ml-3">Fernanda Gomez</div>
+      <a>Inicio</a>
+      <a>Competencias</a>
+      <a>Evaluacion Inicial</a>
+      <a>Listado Saber</a>
+    </div>
+    <div id="content" class="container">
+      <h2>COMPETENCIAS</h2>
+      <div class="row" style=" margin-left: 5%; margin-top: 10%;">
+        <div class="card-deck col">
+          <div class="container">
+            <div class="row">
+  
+              <div class="card col shadow" style="margin: 10px;">
+                <div class="card-body">
+                 
+                  <h5 class="card-title">INGENIERIA DE SOFTWARE I</h5>
+                  <ul>
+                    <li>Taller 1</li>
+                    <li>Taller 2</li>
+                    <li>Laboratorio 1</li>
+                  </ul>
+                </div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary " style="background-color: #235144; border: none; margin: 5px;" data-bs-toggle="modal" data-bs-target="#card_1">
+                  Agregar actividad
+                </button>
+              </div>
+  
+              <!-- modal -->
+              <div class="modal fade" id="card_1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">RAZONAMIENTO CUANTITATIVO</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container ">
+                        <h2 class="fs-3">Agregar Actividad</h2>
+                        <form id="tareaForm">
+                          <div class="form-group">
+                            <label for="nombreTarea">Nombre de la Actividad:</label>
+                            <input type="text" class="form-control" id="nombreTarea" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="detallesTarea">Detalles de la Actividad:</label>
+                            <textarea class="form-control" id="detallesTarea" rows="3"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label for="fechaEntrega">Fecha de Entrega:</label>
+                            <input type="date" class="form-control" id="fechaEntrega" required>
+                          </div>
+                          <button type="button" class="btn btn-primary" style="background-color: #235144; border: none; margin: 20px;" onclick="agregarTarea()">Agregar Actividad</button>
+                        </form>
+                    
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+        
+              <div class="card col shadow" style="margin: 10px;">
+                <div class="card-body">
+                  <h5 class="card-title">PROGRAMACIÓN I</h5>
+                  <ul>
+                    <li>Taller 1</li>
+                    <li>Taller 2</li>
+                    <li>Laboratorio 1</li>
+                  </ul>
+                </div>
+                 <!-- Button trigger modal -->
+                 <button type="button" class="btn btn-primary " style="background-color: #235144; border: none; margin: 5px;" data-bs-toggle="modal" data-bs-target="#card_2">
+                  Agregar actividad
+                </button>
+              </div>
+              
+              <!-- modal -->
+              <div class="modal fade" id="card_2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container ">
+                        <h2 class="fs-3">Agregar Actividad</h2>
+                        <form id="tareaForm">
+                          <div class="form-group">
+                            <label for="nombreTarea">Nombre de la Actividad:</label>
+                            <input type="text" class="form-control" id="nombreTarea" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="detallesTarea">Detalles de la Actividad:</label>
+                            <textarea class="form-control" id="detallesTarea" rows="3"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label for="fechaEntrega">Fecha de Entrega:</label>
+                            <input type="date" class="form-control" id="fechaEntrega" required>
+                          </div>
+                          <button type="button" class="btn btn-primary" style="background-color: #235144; border: none; margin: 20px;" onclick="agregarTarea()">Agregar Actividad</button>
+                        </form>
+                    
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card col shadow" style="margin: 10px;">
+                <div class="card-body">
+                  <h5 class="card-title">BASES DE DATOS</h5>
+                  <ul>
+                    <li>Taller 1</li>
+                    <li>Taller 2</li>
+                    <li>Laboratorio 1</li>
+                  </ul>
+                </div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary " style="background-color: #235144; border: none; margin: 5px;" data-bs-toggle="modal" data-bs-target="#card_3">
+                  Agregar actividad
+                </button>
+              </div>  
+  
+              <!-- modal -->
+              <div class="modal fade" id="card_3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container ">
+                        <h2 class="fs-3">Agregar Actividad</h2>
+                        <form id="tareaForm">
+                          <div class="form-group">
+                            <label for="nombreTarea">Nombre de la Actividad:</label>
+                            <input type="text" class="form-control" id="nombreTarea" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="detallesTarea">Detalles de la Actividad:</label>
+                            <textarea class="form-control" id="detallesTarea" rows="3"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label for="fechaEntrega">Fecha de Entrega:</label>
+                            <input type="date" class="form-control" id="fechaEntrega" required>
+                          </div>
+                          <button type="button" class="btn btn-primary" style="background-color: #235144; border: none; margin: 20px;" onclick="agregarTarea()">Agregar Actividad</button>
+                        </form>
+                    
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row" style="margin-left: 7%;">
+        <div class="card-deck row" >
+          <div class="card col shadow" style="margin: 10px;">
+            <div class="card-body">
+              <h5 class="card-title">ESTRUCTURAS DE DATOS</h5>
+              <ul>
+                <li>Taller 1</li>
+                <li>Taller 2</li>
+                <li>Laboratorio 1</li>
+              </ul>
+            </div>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary " style="background-color: #235144; border: none; margin: 5px;" data-bs-toggle="modal" data-bs-target="#card_4">
+                Agregar actividad
+              </button>
+          </div>
+  
+          
+              <!-- modal -->
+              <div class="modal fade" id="card_4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container ">
+                        <h2 class="fs-3">Agregar Actividad</h2>
+                        <form id="tareaForm">
+                          <div class="form-group">
+                            <label for="nombreTarea">Nombre de la Actividad:</label>
+                            <input type="text" class="form-control" id="nombreTarea" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="detallesTarea">Detalles de la Actividad:</label>
+                            <textarea class="form-control" id="detallesTarea" rows="3"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label for="fechaEntrega">Fecha de Entrega:</label>
+                            <input type="date" class="form-control" id="fechaEntrega" required>
+                          </div>
+                          <button type="button" class="btn btn-primary" style="background-color: #235144; border: none; margin: 20px;" onclick="agregarTarea()">Agregar Actividad</button>
+                        </form>
+                    
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+  
+    
+          <div class="card col shadow" style="margin: 10px;">
+            <div class="card-body">
+              <h5 class="card-title">COMPUTACIÓN GRÁFICA</h5>
+              <ul>
+                <li>Taller 1</li>
+                <li>Taller 2</li>
+                <li>Laboratorio 1</li>
+              </ul>
+            </div>
+             <!-- Button trigger modal -->
+             <button type="button" class="btn btn-primary " style="background-color: #235144; border: none; margin: 5px;" data-bs-toggle="modal" data-bs-target="#card_5">
+              Agregar actividad
+            </button>
+          </div>
+  
+           <!-- modal -->
+           <div class="modal fade" id="card_5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container ">
+                    <h2 class="fs-3">Agregar Actividad</h2>
+                    <form id="tareaForm">
+                      <div class="form-group">
+                        <label for="nombreTarea">Nombre de la Actividad:</label>
+                        <input type="text" class="form-control" id="nombreTarea" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="detallesTarea">Detalles de la Actividad:</label>
+                        <textarea class="form-control" id="detallesTarea" rows="3"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="fechaEntrega">Fecha de Entrega:</label>
+                        <input type="date" class="form-control" id="fechaEntrega" required>
+                      </div>
+                      <button type="button" class="btn btn-primary" style="background-color: #235144; border: none; margin: 20px;" onclick="agregarTarea()">Agregar Actividad</button>
+                    </form>
+                
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  
+    
+  </body>
